@@ -8,14 +8,15 @@
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/AutoBoxin_Unboxing/AutoBoxin_Unboxing.iml" filepath="$PROJECT_DIR$/AutoBoxin_Unboxing/AutoBoxin_Unboxing.iml" />
       <module fileurl="file://$PROJECT_DIR$/AutoboxUnbox_Challenge(Project)/AutoboxUnbox_Challenge(Project).iml" filepath="$PROJECT_DIR$/AutoboxUnbox_Challenge(Project)/AutoboxUnbox_Challenge(Project).iml" />
-      <module fileurl="file://$PROJECT_DIR$/Composition/Composition.iml" filepath="$PROJECT_DIR$/Composition/Composition.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Encapsulation/Encapsulation.iml" filepath="$PROJECT_DIR$/Encapsulation/Encapsulation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/EncapsulationChallenge/EncapsulationChallenge.iml" filepath="$PROJECT_DIR$/EncapsulationChallenge/EncapsulationChallenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPS/Composition/Composition.iml" filepath="$PROJECT_DIR$/OOPS/Composition/Composition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPS/CompositionChallenge/CompositionChallenge.iml" filepath="$PROJECT_DIR$/OOPS/CompositionChallenge/CompositionChallenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPS/Encapsulation/Encapsulation.iml" filepath="$PROJECT_DIR$/OOPS/Encapsulation/Encapsulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPS/EncapsulationChallenge/EncapsulationChallenge.iml" filepath="$PROJECT_DIR$/OOPS/EncapsulationChallenge/EncapsulationChallenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPS/Inheritance/Inheritance.iml" filepath="$PROJECT_DIR$/OOPS/Inheritance/Inheritance.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java-with-Tim-Buchalka.iml" filepath="$PROJECT_DIR$/Java-with-Tim-Buchalka.iml" />
       <module fileurl="file://$PROJECT_DIR$/MinElementChallenge/MinElementChallenge.iml" filepath="$PROJECT_DIR$/MinElementChallenge/MinElementChallenge.iml" />
-      <module fileurl="file://$PROJECT_DIR$/OOPS_master_challenge/OOPS_master_challenge.iml" filepath="$PROJECT_DIR$/OOPS_master_challenge/OOPS_master_challenge.iml" />
       <module fileurl="file://$PROJECT_DIR$/PRACTICE&amp;DEL2/PRACTICE&amp;DEL2.iml" filepath="$PROJECT_DIR$/PRACTICE&amp;DEL2/PRACTICE&amp;DEL2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Polymorphism/Polymorphism.iml" filepath="$PROJECT_DIR$/Polymorphism/Polymorphism.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OOPS/Polymorphism/Polymorphism.iml" filepath="$PROJECT_DIR$/OOPS/Polymorphism/Polymorphism.iml" />
       <module fileurl="file://$PROJECT_DIR$/PolymorphismChallenge/PolymorphismChallenge.iml" filepath="$PROJECT_DIR$/PolymorphismChallenge/PolymorphismChallenge.iml" />
       <module fileurl="file://$PROJECT_DIR$/ReferenceVsValueType/ReferenceVsValueType.iml" filepath="$PROJECT_DIR$/ReferenceVsValueType/ReferenceVsValueType.iml" />
       <module fileurl="file://$PROJECT_DIR$/ReverseArrayChallenge/ReverseArrayChallenge.iml" filepath="$PROJECT_DIR$/ReverseArrayChallenge/ReverseArrayChallenge.iml" />
