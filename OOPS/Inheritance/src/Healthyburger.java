@@ -32,15 +32,8 @@ public class Healthyburger extends Hamburger{
 
     @Override
     public float finalPriceHamburger(){
-    float finalPrice = super.finalPriceHamburger();
-
-    if(this.healthyItem1price != 0){
-        finalPrice += this.healthyItem1price;
-    }
-    if(this.healthyItem2price !=0){
-        finalPrice += this.healthyItem2price;
-    }
-      System.out.println("Final price of Healthy burger of type brown rye is rsdfgdfgs "+ finalPrice);
-      return finalPrice;
+    float finalPrice = super.finalPriceHamburger() + this.healthyItem1price + this.healthyItem2price;
+    System.out.println("Final price of Healthy burger of type brown rye is (incl. the additionalHealthyItems) "+ finalPrice);
+    return finalPrice;
     }
 }
