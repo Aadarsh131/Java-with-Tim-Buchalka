@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.security.jgss.GSSUtil;
+
 class Movie {
     private String name;
 
@@ -105,28 +107,40 @@ class Okja extends Movie {
 public class Main {
 
     public static void main(String[] args) {
+        Jaws j = new Jaws();
+        j.plot();
         //polymorphism in action- (where before the runtime storingMovie has no particular object to run with, it only gets the object during the Runtime and sets the object according to the Factory Method's return type)
-        Movie storingMovie = Movie.getMovie(1);
+        Movie storingMovie = Movie.getMovie(1); //as getMovie() is static method, we can only access it by classname (not from its instance)
         System.out.println(storingMovie.getName());
-        storingMovie.plot(); //NOTE: "Jaws" class plot() method is being accessed here, because of @Override
+        storingMovie.plot(); //NOTE: "Jaws" class plot() method is being accessed here, as it is overridden
 //        storingMovie.watchJaws(); //not accessible
 
         //casting
         Jaws mouv = (Jaws) Movie.getMovie(1); //we explicitly want the Jaws object (hence casting), Notice the type of class we are storing 'mouv' in (its not general Movie class type, its explicitly a Jaws class type)
         System.out.println("MovieName(using casting): " + mouv.getName());
+        mouv.watchJaws();
 
         //we can assign an instance to a variable of same datatype(class) or a parents type, or a parent's parent type, including java.lang.Object, the ultimate base class
-        Object unknowObjType = Movie.getMovie(4);
-//        unknowObjType.plot(); // WHY its an error, on the runtime isn't `Object` supposed to get Change to its instance type (i.e, StarWares in our case)?
-        System.out.println(unknowObjType.getClass().getSimpleName()); // why this is working, if `unknowObjType.plot()` is not working
-        Movie movy = (Movie) unknowObjType;
-        movy.plot(); // why it is working now, after casting
+        Object unknowObjType = Movie.getMovie(4); //since, Object is the parent class of Movie
+        System.out.println(unknowObjType.getClass().getSimpleName()); // only methods of Object class is accessible
+        //casting it back to Movie
+        Movie movy = (Movie) unknowObjType; //only methods of Movie class is accessible
+        movy.plot();
+
 
         //Or, we can use "var" (LVTI- Local variable Type inference)
         var obj = Movie.getMovie(3); //compile type is Movie
         obj.plot(); //runtime type is MazeRunner
 
         ///////////////////Evaluating the Runtime type///////////////////
+        Object unknowObj = Movie.getMovie(3);
+        if (unknowObj.getClass().getSimpleName().equals("IndependenceDay")) { // method 1
+            ((IndependenceDay) unknowObj).watchIndependenceDay();
+        } else if (unknowObj instanceof MazeRunner) { // method 2
+            ((MazeRunner) unknowObj).watchMazerunner();
+        } else if (unknowObj instanceof Jaws ja){// method 3 (pattern mathcing for instance of operator)
+            ja.watchJaws();
+        }
 
     }
 }

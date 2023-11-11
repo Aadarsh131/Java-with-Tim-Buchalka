@@ -15,14 +15,14 @@ public class Motherboard extends Product {
 //        System.out.println("Motherboard ovelaoded ctr (with all incl. dimensions)");
     }
 
-    public Motherboard(String name, String manufacturer, String model, int ramSlots, String bios) {
+    private Motherboard(String name, String manufacturer, String model, int ramSlots, String bios) {
       this(name,manufacturer,model);//delegation
         this.ramSlots = ramSlots;
         this.bios = bios;
 //        System.out.println("Motherboard ovelaoded ctr (with ramSlots and bios)");
     }
 
-    public Motherboard(String name, String manufacturer, String model) {
+    private Motherboard(String name, String manufacturer, String model) {
         super(name, manufacturer, model);
 //        System.out.println("Motherboard default ctr");
     }

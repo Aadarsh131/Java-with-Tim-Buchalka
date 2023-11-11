@@ -25,7 +25,9 @@ public class PC extends Product{
    public void TurnOnPc(){
         CASE.TurnOnPc();
    }
-
+   public void whatIsMyMonitorDimension(){
+       MONITOR.Dimensions();
+   }
 
 //NOT ideal to give direct access to the these critical classes, instead we will provide what is important for a user
 //    public Case getCASE() {
@@ -40,3 +42,4 @@ public class PC extends Product{
 //        return MONITOR;
 //    }
 }
+

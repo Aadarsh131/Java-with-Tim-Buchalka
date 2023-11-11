@@ -2,86 +2,100 @@ package com.company;
 
 class Car {
     private String name;
-    private Boolean engine;
-    private int cylinders;
-    private int wheels;
+    private String carType;
 
-    public Car(String name, int cylinders, int wheels){
+    protected Car(String name) {
         this.name = name;
-        this.cylinders = cylinders;
-        this.wheels = wheels;
-        this.engine = true;
+        this.carType = this.getClass().getSimpleName();
     }
 
-    public void StarEngine(){
-        System.out.println(getClass().getSimpleName()+" engine started");
-        // getClass() will check which class we are in
-        // then, getSimpleName() will fetch the name of that class
+    protected void description() {
+        System.out.println(this.name + " (type: " + carType + ")");
     }
 
-    public void accelerate(){
-        System.out.println("got accelerated");
+    protected void startEngine() {
+        System.out.println("starting " + this.getClass().getSimpleName() + "'s Engine");
     }
 
-    public void brake(){
-        System.out.println("applied brake");
+    protected String getName() {
+        return this.name;
     }
 
-    public String getName(){
-        return name;
-    }
-    public int getCylinders(){
-        return cylinders;
+    protected String getCarType() {
+        return this.carType;
     }
 
-    public int getWheels(){
-        return wheels;
+    //FACTORY METHOD
+    public static Car selectCarForRide(int n) {
+        return switch (n) {
+            case 1 -> new ElectricCar("myElectricCar");
+            case 2 -> new HybridCar("myHybridCar", true);
+            default -> new GasPowerdCar("myGasCar");
+        };
     }
 }
 
 
-class Bmw extends Car{
-
-    public Bmw(String name, int cylinders, int wheels) {
-        super(name, cylinders, wheels);
+class ElectricCar extends Car {
+    public ElectricCar(String name) {
+        super(name);
     }
 
-    @Override
-    public void StarEngine() {
-        System.out.println("Starting " +getClass().getSimpleName()+" engine");
-        // getClass() will check which class we are in
-        // then, getSimpleName() will fetch the name of that class
-    }
-
-    @Override
-    public void accelerate() {
-        super.accelerate();
-    }
-
-    @Override
-    public void brake() {
-        super.brake();
+    public void rechargeTheBattery() {
+        System.out.println("Charging the battery");
     }
 }
 
+class GasPowerdCar extends Car {
+    public GasPowerdCar(String name) {
+        super(name);
+    }
 
+    public void fuelUpTheTank() {
+        System.out.println("Fuelling the Tank");
+    }
 
+}
 
+class HybridCar extends Car {
+    private Boolean modeElectric = false;
+    private Boolean modeGas = false;
 
+    public HybridCar(String name, Boolean electricMode) {
+        super(name);
+    }
+
+    public void rechargeOrReFuel() { //default mode is `modeGas`
+        if (this.modeElectric) System.out.println("recharging the hybrid car");
+        else System.out.println("Fuelling the hybrid car Tank");
+    }
+
+    public void setModeGas() {
+        this.modeGas = true;
+        this.modeElectric = false;
+    }
+
+    public void setModeElectric() {
+        this.modeElectric = true;
+        this.modeGas = false;
+    }
+}
 
 
 public class Main {
 
     public static void main(String[] args) {
-	Car car = new Car("vehicle", 4,4);
-    car.StarEngine();
-    car.accelerate();
-    car.brake();
+        HybridCar myHybridCar = new HybridCar("Nexon", true);
+        System.out.println(myHybridCar.getCarType());
+//        myHybridCar.setModeElectric();
+//        myHybridCar.setModeGas();
+        myHybridCar.rechargeOrReFuel();
 
-    Bmw bmw = new Bmw("BMW",8,6);
-    bmw.StarEngine();
-    bmw.accelerate();
-    bmw.brake();
 
+        //example of Polymorphism
+        var myCar = Car.selectCarForRide(3);
+        if (myCar instanceof ElectricCar e) e.rechargeTheBattery();
+        else if (myCar instanceof HybridCar h) h.rechargeOrReFuel();
+        else ((GasPowerdCar) myCar).fuelUpTheTank();
     }
 }
