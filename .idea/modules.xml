@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/_11_InnerAndAbstractClassesInterfaces/AbstractClass/AbstractClass.iml" filepath="$PROJECT_DIR$/_11_InnerAndAbstractClassesInterfaces/AbstractClass/AbstractClass.iml" />
       <module fileurl="file://$PROJECT_DIR$/ArrayChallenge/ArrayChallenge.iml" filepath="$PROJECT_DIR$/ArrayChallenge/ArrayChallenge.iml" />
       <module fileurl="file://$PROJECT_DIR$/ArrayList/ArrayList.iml" filepath="$PROJECT_DIR$/ArrayList/ArrayList.iml" />
       <module fileurl="file://$PROJECT_DIR$/ArrayList-Challenge( have bugs)/ArrayList-Challenge( have bugs).iml" filepath="$PROJECT_DIR$/ArrayList-Challenge( have bugs)/ArrayList-Challenge( have bugs).iml" />
@@ -12,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/OOPS/Encapsulation/Encapsulation.iml" filepath="$PROJECT_DIR$/OOPS/Encapsulation/Encapsulation.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOPS/EncapsulationChallenge/EncapsulationChallenge.iml" filepath="$PROJECT_DIR$/OOPS/EncapsulationChallenge/EncapsulationChallenge.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOPS/Inheritance/Inheritance.iml" filepath="$PROJECT_DIR$/OOPS/Inheritance/Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_11_InnerAndAbstractClassesInterfaces/Interfaces/Interfaces.iml" filepath="$PROJECT_DIR$/_11_InnerAndAbstractClassesInterfaces/Interfaces/Interfaces.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java-with-Tim-Buchalka.iml" filepath="$PROJECT_DIR$/Java-with-Tim-Buchalka.iml" />
       <module fileurl="file://$PROJECT_DIR$/MinElementChallenge/MinElementChallenge.iml" filepath="$PROJECT_DIR$/MinElementChallenge/MinElementChallenge.iml" />
       <module fileurl="file://$PROJECT_DIR$/PRACTICE&amp;DEL2/PRACTICE&amp;DEL2.iml" filepath="$PROJECT_DIR$/PRACTICE&amp;DEL2/PRACTICE&amp;DEL2.iml" />
